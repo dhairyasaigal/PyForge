@@ -1,6 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "pyforge-site/dist",
   "rewrites": [
     {
       "source": "/(.*)",
