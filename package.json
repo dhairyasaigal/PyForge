@@ -1,0 +1,8 @@
+{
+  "name": "pyforge-monorepo",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd pyforge-site && npm install",
+    "build": "cd pyforge-site && npm run build"
+  }
+}
