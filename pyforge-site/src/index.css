@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-pyblue: #0066FF;
-  --color-pyblue-light: #3385FF;
-  --color-pyblue-dark: #0047CC;
-  --color-cyan: #00C8FF;
-  --color-violet: #8B5CF6;
-  --color-navy: #0A1628;
-  --color-navy-mid: #1B2D4F;
-  --color-gray-bg: #F8FAFF;
-  --color-gray-light: #EEF2FF;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --color-canvas: #FFFDF5;
+  --color-ink: #1E293B;
+  --color-slate-muted: #64748B;
+  --color-light-muted: #F1F5F9;
+  --color-pop-violet: #8B5CF6;
+  --color-pop-pink: #F472B6;
+  --color-pop-yellow: #FBBF24;
+  --color-pop-mint: #34D399;
+  --color-pop-blue: #2563EB;
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 *, *::before, *::after {
@@ -19,7 +20,9 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
+  background-color: #FFFDF5;
+  color: #1E293B;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,9 +30,192 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #0A1628;
+  background-color: #FFFDF5;
+  color: #1E293B;
+  font-family: var(--font-body);
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Hard Pop Shadow Utilities */
+.shadow-pop {
+  box-shadow: 4px 4px 0px 0px #1E293B;
+}
+
+.shadow-pop-sm {
+  box-shadow: 2px 2px 0px 0px #1E293B;
+}
+
+.shadow-pop-lg {
+  box-shadow: 8px 8px 0px 0px #1E293B;
+}
+
+.shadow-pop-xl {
+  box-shadow: 12px 12px 0px 0px #1E293B;
+}
+
+.shadow-pop-pink {
+  box-shadow: 6px 6px 0px 0px #F472B6;
+}
+
+.shadow-pop-yellow {
+  box-shadow: 6px 6px 0px 0px #FBBF24;
+}
+
+.shadow-pop-mint {
+  box-shadow: 6px 6px 0px 0px #34D399;
+}
+
+.shadow-pop-violet {
+  box-shadow: 6px 6px 0px 0px #8B5CF6;
+}
+
+.shadow-pop-blue {
+  box-shadow: 6px 6px 0px 0px #2563EB;
+}
+
+/* Dot Grid Background */
+.bg-dot-grid {
+  background-image: radial-gradient(#1E293B 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.bg-dot-grid-subtle {
+  background-image: radial-gradient(rgba(30, 41, 59, 0.12) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+.bg-dot-grid-white {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}
+
+/* Primary Candy Button */
+.btn-candy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  border-radius: 9999px;
+  border: 2px solid #1E293B;
+  box-shadow: 4px 4px 0px 0px #1E293B;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-candy:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #1E293B;
+}
+
+.btn-candy:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #1E293B;
+}
+
+/* Secondary Candy Button */
+.btn-candy-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #1E293B;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  border-radius: 9999px;
+  border: 2px solid #1E293B;
+  box-shadow: 4px 4px 0px 0px #1E293B;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-candy-secondary:hover {
+  background-color: #FBBF24;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #1E293B;
+}
+
+.btn-candy-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #1E293B;
+}
+
+/* Candy Pill Badge */
+.badge-candy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 2px solid #1E293B;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  box-shadow: 2px 2px 0px 0px #1E293B;
+}
+
+/* Sticker Card */
+.card-sticker {
+  border: 2px solid #1E293B;
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0px 0px #1E293B;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+
+.card-sticker:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 9px 9px 0px 0px #1E293B;
+}
+
+/* Neo Input */
+.input-neo {
+  background-color: #FFFFFF;
+  border: 2px solid #1E293B;
+  border-radius: 0.85rem;
+  padding: 0.75rem 1rem;
+  color: #1E293B;
+  font-size: 0.925rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-neo:focus {
+  border-color: #8B5CF6;
+  box-shadow: 4px 4px 0px 0px #8B5CF6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFDF5;
+  border-left: 2px solid #1E293B;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B5CF6;
+  border: 2px solid #1E293B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F472B6;
+}
+
+/* Selection */
+::selection {
+  background: #FBBF24;
+  color: #1E293B;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -41,22 +227,4 @@ body {
   html {
     scroll-behavior: auto;
   }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-::-webkit-scrollbar-thumb {
-  background: #0066FF;
-  border-radius: 3px;
-}
-
-/* Selection */
-::selection {
-  background: #0066FF20;
-  color: #0066FF;
 }

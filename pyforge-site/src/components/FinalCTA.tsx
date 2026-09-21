@@ -1,8 +1,5 @@
-import { lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-
-const ParticleBackground = lazy(() => import('./three/ParticleBackground'))
+import { ArrowRight, Wrench, CheckCircle2 } from 'lucide-react'
 
 const FinalCTA: React.FC = () => {
   const scrollTo = (href: string) => {
@@ -11,83 +8,112 @@ const FinalCTA: React.FC = () => {
   }
 
   return (
-    <section id="final-cta" className="relative py-32 lg:py-40 bg-gradient-to-br from-white via-[#F0F5FF] to-[#EEF2FF] overflow-hidden">
-      {/* Particle background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <Suspense fallback={null}>
-          <ParticleBackground />
-        </Suspense>
+    <section id="final-cta" className="py-24 lg:py-32 bg-[#FBBF24] border-t-2 border-b-2 border-[#1E293B] relative overflow-hidden">
+      {/* Background dot grid pattern */}
+      <div className="absolute inset-0 bg-dot-grid opacity-15 pointer-events-none" />
+
+      {/* Playful Memphis Background Floating Shapes */}
+      <div className="absolute top-10 left-10 hidden sm:block pointer-events-none">
+        <div className="w-12 h-12 rounded-full border-2 border-[#1E293B] bg-[#F472B6] shadow-pop-sm rotate-12" />
+      </div>
+      <div className="absolute bottom-12 right-12 hidden sm:block pointer-events-none">
+        <div className="w-14 h-14 border-2 border-[#1E293B] bg-[#34D399] shadow-pop-sm -rotate-12" />
+      </div>
+      <div className="absolute top-1/2 right-8 hidden lg:block pointer-events-none">
+        <svg width="60" height="30" viewBox="0 0 60 30" fill="none" className="text-[#8B5CF6]">
+          <path d="M2 15C8 5 14 5 20 15C26 25 32 25 38 15C44 5 50 5 56 15" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+        </svg>
       </div>
 
-      {/* Subtle gradient orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0066FF]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00C8FF]/5 rounded-full blur-3xl pointer-events-none" />
-
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        
+        {/* Eyebrow badge */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-2 mb-8"
+          className="inline-flex items-center gap-2 badge-candy bg-white text-[#1E293B] mb-6 shadow-pop-sm"
         >
-          <div className="h-px w-8 bg-[#0066FF]" />
-          <span className="text-xs font-semibold tracking-widest text-[#0066FF] uppercase">Ready to Build?</span>
-          <div className="h-px w-8 bg-[#0066FF]" />
+          <Wrench size={14} strokeWidth={2.5} className="text-[#8B5CF6]" />
+          <span>Automobile & Mechanical Engineering Software</span>
         </motion.div>
 
+        {/* Master Headline */}
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-6xl lg:text-8xl font-black leading-[1.02] tracking-tight mb-6"
+          className="font-heading text-5xl sm:text-7xl lg:text-8xl font-black text-[#1E293B] leading-[1.02] tracking-tight mb-6"
         >
-          <span className="text-[#0A1628]">You Ask It.</span>
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0066FF] to-[#00C8FF]">
+          You Ask It. <br />
+          <span className="text-[#8B5CF6] underline decoration-[#1E293B] decoration-wavy decoration-4">
             We'll Make It
-          </span>
-          <span className="text-[#0A1628]"> For You.</span>
+          </span>{' '}
+          For You.
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.25 }}
-          className="text-lg text-[#0A1628]/55 mb-12 max-w-lg mx-auto"
+          transition={{ delay: 0.2 }}
+          className="text-base sm:text-xl text-[#1E293B]/85 font-bold mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Your idea doesn't need to stay an idea.
+          Stop losing hours to manual CMM logging, rigid spreadsheets, or generic SaaS that doesn't understand your machines. 
+          Hit us with your requirements and let's forge software that fits.
         </motion.p>
 
+        {/* CTAs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.35 }}
+          transition={{ delay: 0.3 }}
           className="flex flex-wrap gap-4 justify-center"
         >
-          <motion.button
+          <button
             id="finalcta-primary"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
             onClick={() => scrollTo('#contact')}
-            className="flex items-center gap-2 bg-[#0066FF] text-white px-8 py-4 rounded-full text-base font-bold hover:bg-[#0047CC] transition-colors shadow-2xl shadow-blue-500/30"
+            className="btn-candy bg-[#8B5CF6] text-white hover:bg-[#1E293B] px-8 py-4 text-base"
           >
-            Start a Project
-            <ArrowRight size={18} />
-          </motion.button>
-          <motion.button
+            <span>Hit Us With Your Query</span>
+            <span className="w-7 h-7 rounded-full bg-white text-[#1E293B] flex items-center justify-center">
+              <ArrowRight size={16} strokeWidth={3} />
+            </span>
+          </button>
+
+          <button
             id="finalcta-secondary"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
             onClick={() => scrollTo('#our-work')}
-            className="flex items-center gap-2 bg-white text-[#0A1628] px-8 py-4 rounded-full text-base font-bold border border-gray-200 hover:border-[#0066FF] hover:text-[#0066FF] transition-all shadow-sm"
+            className="btn-candy-secondary px-8 py-4 text-base bg-white"
           >
-            See Our Work
-            <ArrowRight size={18} />
-          </motion.button>
+            <span>Review Live Deployments</span>
+          </button>
         </motion.div>
+
+        {/* Trust points */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-[#1E293B]"
+        >
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 size={16} strokeWidth={2.5} className="text-[#1E293B]" />
+            Direct Founder Engineering
+          </span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 size={16} strokeWidth={2.5} className="text-[#1E293B]" />
+            Fixed Upfront Quotes in 24h
+          </span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 size={16} strokeWidth={2.5} className="text-[#1E293B]" />
+            100% Code Ownership
+          </span>
+        </motion.div>
+
       </div>
     </section>
   )

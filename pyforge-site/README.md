@@ -31,7 +31,8 @@ Startups, small businesses, solo founders, and enterprise teams across **IT, Fin
 
 - 🔗 LinkedIn: [linkedin.com/in/dhairya-saigal-3a9702280](https://www.linkedin.com/in/dhairya-saigal-3a9702280)
 - 🐙 GitHub: [github.com/dhairyasaigal](https://github.com/dhairyasaigal)
-- 📧 Email: [contactpyforge@gmail.com](mailto:contactpyforge@gmail.com)
+- 📧 Personal Email: [saigaldhairya1@gmail.com](mailto:saigaldhairya1@gmail.com)
+- 🏢 Company Email: [contactpyforge@gmail.com](mailto:contactpyforge@gmail.com)
 
 > *"You don't need to know how to build it. Just tell us what you need."*
 
@@ -87,14 +88,14 @@ npx vercel --prod
 ---
 
 ## 📬 Contact
-
+ 
 Have a project in mind? Reach out:
-
-- **Email:** [contactpyforge@gmail.com](mailto:contactpyforge@gmail.com)
-- **Website:** [pyforge.vercel.app](https://pyforge.vercel.app)
-- **LinkedIn:** [PyForge](https://www.linkedin.com/company/pyforge)
+ 
+- **Company Email (Official):** [contactpyforge@gmail.com](mailto:contactpyforge@gmail.com)
+- **Personal / Founder Email:** [saigaldhairya1@gmail.com](mailto:saigaldhairya1@gmail.com)
+- **Address:** A-2, 303 Avalon Gardens, Bhiwadi
+- **WhatsApp:** +91 6378753622
 
 ---
-
+ 
 © 2026 PyForge. All rights reserved. · *Ideas · Code · Solutions*
-
